@@ -15,12 +15,22 @@ public class Empleados extends Persona{
     private static int contador;
 
     public Empleados() {
+        this.idEmpleado = ++Empleados.contador;
+    }
+
+    
+    
+    public Empleados(String nombre, double sueldo) {
+        this();
+        this.nombre= nombre;
+        this.sueldo=sueldo;
+        
     }
 
     public Empleados(double sueldo, String nombre, String direccion, char genero, int edad) {
         super(nombre, direccion, genero, edad);
         this.sueldo = sueldo;
-        this.idEmpleado=++Empleados.contador;
+        //this.idEmpleado=++Empleados.contador;
     }
 
     public int getIdEmpleado() {
@@ -41,8 +51,10 @@ public class Empleados extends Persona{
 
     @Override
     public String toString() {
-        return "Empleados{" + "idEmpleado=" + idEmpleado + ", sueldo=" + sueldo + '}';
+        return "Empleados{" + "idEmpleado=" + idEmpleado + ", sueldo=" + sueldo + " , " + super.toString()+'}';
     }
+
+    
     
     
 }

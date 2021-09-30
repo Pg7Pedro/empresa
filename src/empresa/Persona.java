@@ -10,9 +10,9 @@ package empresa;
  * @author gemam
  */
 public class Persona {
-    private String nombre, direccion;
-    private char genero;
-    private int edad;
+    protected String nombre, direccion;
+    protected char genero;
+    protected int edad;
 
     public Persona() {
     }
